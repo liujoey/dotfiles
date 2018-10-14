@@ -11,6 +11,7 @@ if ! zgen saved; then
   zgen load zdharma/history-search-multi-word
   zgen load zsh-users/zsh-completions src
   zgen load lotabout/skim shell  # completions
+  zgen load nojhan/liquidprompt
 
   if [[ -z $SSH_CONNECTION ]]; then
     zgen load zdharma/fast-syntax-highlighting
@@ -19,7 +20,6 @@ if ! zgen saved; then
   zgen save
 fi
 
-_load shell/zsh/prompt.zsh
 _load shell/zsh/config.zsh
 _load shell/zsh/completion.zsh
 _load shell/zsh/keybinds.zsh
