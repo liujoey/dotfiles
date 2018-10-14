@@ -7,9 +7,12 @@ install() {
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
+  brew tap homebrew/cask
+  brew cask install keybase
+
   brew install \
     wget curl tree coreutils bash gnupg2 \
-    the_silver_searcher ripgrep ffmpeg keybase \
+    the_silver_searcher ripgrep ffmpeg \
     neofetch youtube-dl pinentry-mac
 
   # pass-otp
