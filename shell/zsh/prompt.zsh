@@ -68,6 +68,7 @@ prompt_init() {
 
   RPROMPT='%F{blue}%~%F{magenta}${vcs_info_msg_0_}$(prompt_git_dirty)%f'
   PROMPT='%F{blue}${prompt_username}%f${PROMPT_SYMBOL:-$ }'
+  TERM='xterm-256color'
 }
 
 prompt_init "$@"
