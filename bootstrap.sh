@@ -5,7 +5,7 @@
 # Installs zsh & git, then clones this repo to ~/.dotfiles. This script is
 # intended to be run remotely, via curl:
 #
-# bash <(curl -s https://raw.githubusercontent.com/hlissner/dotfiles/master/bootstrap.sh)
+# bash <(curl -s https://raw.githubusercontent.com/liujoey/dotfiles/master/bootstrap.sh)
 
 export DOTFILES=~/.dotfiles
 set -e
@@ -25,10 +25,10 @@ fi
 
 if [[ ! -d ~/.dotfiles ]]; then
   _msg "Deploying dotfiles repository..."
-  if [[ $USER == hlissner ]]; then
-    dfrepo=git@github.com:hlissner/dotfiles.git
+  if [[ $USER == joey ]]; then
+    dfrepo=git@github.com:liujoey/dotfiles.git
   else
-    dfrepo=https://github.com/hlissner/dotfiles
+    dfrepo=https://github.com/liujoey/dotfiles.git
   fi
   git clone --recursive "$dfrepo" "$DOTFILES"
 fi
