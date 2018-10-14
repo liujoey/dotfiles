@@ -10,7 +10,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-history-substring-search
   zgen load zdharma/history-search-multi-word
   zgen load zsh-users/zsh-completions src
-  zgen load junegunn/fzf shell  # completions
+  zgen load lotabout/skim shell  # completions
 
   if [[ -z $SSH_CONNECTION ]]; then
     zgen load zdharma/fast-syntax-highlighting
