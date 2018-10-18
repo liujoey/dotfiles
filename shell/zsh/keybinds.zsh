@@ -127,4 +127,4 @@ bindkey -M viins '^X,' _history-complete-newer \
 
 # sk keybinding lost after bindkey -v command, rebind here
 bindkey -M viins '^T' skim-file-widget
-bindkey -M viins '^R' skim-history-widget
+bindkey -M viins '^R' history-search-multi-word
