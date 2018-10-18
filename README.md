@@ -16,7 +16,7 @@ possible).
 
 ## Quick start
 
-`bash <(curl -s https://raw.githubusercontent.com/hlissner/dotfiles/master/bootstrap.sh)`
+`bash <(curl -s https://raw.githubusercontent.com/liujoey/dotfiles/master/bootstrap.sh)`
 
 ## Overview
 
