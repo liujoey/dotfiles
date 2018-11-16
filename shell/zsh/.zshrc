@@ -6,6 +6,7 @@ if ! zgen saved; then
   echo "Creating zgen save"
   _cache_clear
 
+  zgen oh-my-zsh plugins/docker
   zgen load hlissner/zsh-autopair autopair.zsh develop
   zgen load zsh-users/zsh-history-substring-search
   zgen load zdharma/history-search-multi-word

@@ -1,4 +1,5 @@
-unsetopt GLOBAL_RCS  # disable global zsh config; we'll handle it ourselves
+# disable global zsh config; we'll handle it ourselves
+unsetopt GLOBAL_RCS
 source $(cd ${${(%):-%x}:A:h}/../.. && pwd -P)/env
 
 # Move ZDOTDIR from $HOME to reduce dotfile pollution.
