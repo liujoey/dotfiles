@@ -20,5 +20,29 @@ export LESS='-R -i -w -M -z-4'
 export LESSHISTFILE="$XDG_DATA_HOME/lesshst"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
+#
+# FZF
+#
+export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || fd --type f) 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_DEFAULT_OPTS='--color light'
+
+#
+# Mac os location based proxy auto config
+#
+if [[ $OSTYPE =~ 'darwin' ]]; then
+  location_string=`networksetup -getcurrentlocation`
+  if [[ $location_string == 'Philips' ]]; then
+    export http_proxy=http://199.168.151.10:10015
+    export https_proxy=$http_proxy
+    export no_proxy=127.0.0.1,localhost,130.140.61.90,130.140.61.227
+  else
+    unset http_proxy
+    unset https_proxy
+    unset ALL_PROXY
+    unset no_proxy
+  fi
+fi
+
 # initialize enabled topics
 _load_all env.zsh
