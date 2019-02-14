@@ -3,7 +3,8 @@ source ${0:A:h}/../../deploy
 source env.zsh
 
 install() {
-  _ensure_repo pyenv/pyenv $PYENV_ROOT
+  curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+  # _ensure_repo pyenv/pyenv $PYENV_ROOT
 }
 
 update() {
