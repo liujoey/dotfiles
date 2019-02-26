@@ -156,7 +156,7 @@ function clean {
 if [[ $ZSH_EVAL_CONTEXT != *:file ]]; then
   while getopts acdehlLit opt; do
     case $opt in
-      a) TARGETS="$(_topics)"  ;;
+      a) TARGETS=( $(_topics) );;
       c) CLEAN=1               ;;
       d) REMOVE=1              ;;
       L) LIST=1                ;;
