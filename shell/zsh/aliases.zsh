@@ -55,5 +55,10 @@ alias ydl-m4a='youtube-dl --extract-audio --audio-format m4a'
 alias ddg=duckduckgo
 alias bt=transmission-remote
 
+# Kitty Terminal
+if [[ "$TERM" == "xterm-kitty" ]]; then
+    alias ssh='kitty +kitten ssh'
+fi
+
 take() { mkdir "$1" && cd "$1"; }; compdef take=mkdir
 hex()  { echo -n $@ | xxd -psdu; }

@@ -23,7 +23,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 #
 # FZF
 #
-export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || fd --type f) 2> /dev/null'
+export FZF_DEFAULT_COMMAND='(fd --type f) 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_DEFAULT_OPTS='--color light'
 
@@ -33,9 +33,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 if [[ $OSTYPE =~ 'darwin' ]]; then
   location_string=`networksetup -getcurrentlocation`
   if [[ $location_string == 'Philips' ]]; then
-    export http_proxy=http://199.168.151.10:10015
+    export http_proxy=http://amec.zscaler.philips.com:10015
     export https_proxy=$http_proxy
-    export no_proxy=127.0.0.1,localhost,130.140.61.90,130.140.61.227
+    export no_proxy=127.0.0.1,localhost,.philips.com
   else
     unset http_proxy
     unset https_proxy
