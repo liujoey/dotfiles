@@ -2,6 +2,8 @@
 export ZGEN_AUTOLOAD_COMPINIT=0
 AUTOPAIR_INHIBIT_INIT=1
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 if ! source "$ZGEN_DIR/init.zsh"; then
     _load_repo tarjoilija/zgen $ZGEN_DIR zgen.zsh
     echo "Creating zgen save"
@@ -9,11 +11,13 @@ if ! source "$ZGEN_DIR/init.zsh"; then
 
     zgen load hlissner/zsh-autopair autopair.zsh develop
     zgen load zsh-users/zsh-history-substring-search
+    zgen load zsh-users/zsh-autosuggestions
     zgen load zdharma/history-search-multi-word
     zgen load zsh-users/zsh-completions src
     zgen load lotabout/skim shell  # completions
     zgen load mafredri/zsh-async
     zgen load sindresorhus/pure
+    zgen load wfxr/forgit
 
     if [[ -z $SSH_CONNECTION ]]; then
         zgen load zdharma/fast-syntax-highlighting
@@ -40,7 +44,5 @@ export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 path=( $PYENV_ROOT/bin $path )
 eval "$(pyenv init - --no-rehash)"
 eval "$(pyenv virtualenv-init -)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # zprof
 # vim:set ft=sh:
