@@ -13,7 +13,7 @@ install() {
       ;;
   esac
 
-  _ensure_repo hlissner/.vim $NVIM_INSTALL_DIR && \
+  _ensure_repo liujoey/.vim $NVIM_INSTALL_DIR && \
     cd $NVIM_INSTALL_DIR && \
     make install
 }

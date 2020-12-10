@@ -16,7 +16,6 @@ if ! source "$ZGEN_DIR/init.zsh"; then
     zgen load zsh-users/zsh-completions src
     zgen load lotabout/skim shell  # completions
     zgen load mafredri/zsh-async
-    zgen load sindresorhus/pure
     zgen load wfxr/forgit
 
     if [[ -z $SSH_CONNECTION ]]; then
@@ -44,5 +43,11 @@ export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 path=( $PYENV_ROOT/bin $path )
 eval "$(pyenv init - --no-rehash)"
 eval "$(pyenv virtualenv-init -)"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=1'
+
+eval "$(starship init zsh)"
 # zprof
 # vim:set ft=sh:
