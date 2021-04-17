@@ -12,9 +12,7 @@ if ! source "$ZGEN_DIR/init.zsh"; then
     zgen load hlissner/zsh-autopair autopair.zsh develop
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-autosuggestions
-    zgen load zdharma/history-search-multi-word
     zgen load zsh-users/zsh-completions src
-    zgen load lotabout/skim shell  # completions
     zgen load mafredri/zsh-async
     zgen load wfxr/forgit
 

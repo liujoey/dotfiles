@@ -25,7 +25,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 #
 export FZF_DEFAULT_COMMAND='(fd --type f) 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# export FZF_DEFAULT_OPTS='--color light'
+export FZF_DEFAULT_OPTS='--color light --reverse'
 
 #
 # Mac os location based proxy auto config

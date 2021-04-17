@@ -124,7 +124,3 @@ bindkey -rM viins '^X'
 bindkey -M viins '^X,' _history-complete-newer \
   '^X/' _history-complete-older \
   '^X`' _bash_complete-word
-
-# sk keybinding lost after bindkey -v command, rebind here
-bindkey -M viins '^T' skim-file-widget
-bindkey -M viins '^R' history-search-multi-word
