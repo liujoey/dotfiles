@@ -7,20 +7,10 @@ install() {
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
-  brew tap homebrew/cask
-  brew cask install keybase
-
   brew install \
-    wget curl tree coreutils bash gnupg2 \
-    the_silver_searcher ripgrep ffmpeg \
-    neofetch youtube-dl pinentry-mac
+    wget curl tree coreutils bash \
+    the_silver_searcher ripgrep
 
-  # pass-otp
-  brew install pass oath-toolkit
-  if _ensure_repo tadfisher/pass-otp /tmp/pass-otp; then
-    cd /tmp/pass-otp
-    make install PREFIX=/usr/local
-  fi
 }
 
 update() {
