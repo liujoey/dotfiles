@@ -1,6 +1,6 @@
 [user]
-	name = Henrik Lissner
-	email = henrik@lissner.net
+	name = Joey Liu
+	email = liu.joey@gmail.com
 
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -34,3 +34,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[delta]
+    syntax-theme = OneHalfLight
