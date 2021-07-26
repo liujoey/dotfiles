@@ -51,3 +51,4 @@ fi
 
 # initialize enabled topics
 _load_all env.zsh
+source "$HOME/.cargo/env"
