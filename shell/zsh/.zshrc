@@ -37,12 +37,16 @@ export _FASD_VIMINFO="$XDG_CACHE_HOME/viminfo"
 _cache fasd --init posix-alias zsh-{hook,{c,w}comp{,-install}}
 autopair-init
 
+#
+# PYENV
+#
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-path=( $PYENV_ROOT/bin $path )
+eval "$(pyenv init --path)"
 eval "$(pyenv init - --no-rehash)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv virtualenv-init -)"
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=1'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 eval "$(starship init zsh)"
 # zprof
