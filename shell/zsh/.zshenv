@@ -32,6 +32,8 @@ export FZF_DEFAULT_OPTS='--reverse
 --color=info:#88909f,prompt:#d05858,pointer:#b05ccc 
 --color=marker:#608e32,spinner:#d05858,header:#3a8b84'
 
+export FORGIT_FZF_DEFAULT_OPTS="--exact --cycle --border"
+
 #
 # Mac os location based proxy auto config
 #

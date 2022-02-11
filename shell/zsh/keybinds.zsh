@@ -69,11 +69,11 @@ bindkey '^[[B' history-substring-search-down
 # C-z to toggle current process (background/foreground)
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
+    BUFFER=" fg"
+    zle accept-line -w
   else
-    zle push-input
-    zle clear-screen
+    zle push-input -w
+    zle clear-screen -w
   fi
 }
 zle -N fancy-ctrl-z
