@@ -13,22 +13,17 @@ install() {
       ;;
   esac
 
-  _ensure_repo liujoey/.vim $NVIM_INSTALL_DIR && \
-    cd $NVIM_INSTALL_DIR && \
-    make install
+  _ensure_repo liujoey/nvim $NVIM_INSTALL_DIR
 }
 
 update() {
-  cd $NVIM_INSTALL_DIR && make update
 }
 
 link() {
-  mklink $NVIM_INSTALL_DIR $XDG_CONFIG_HOME/vim
 }
 
 clean() {
   rm -fv $NVIM_INSTALL_DIR
-  rm -fv $XDG_CONFIG_HOME/vim
 }
 
 init "$@"
