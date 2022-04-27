@@ -2,6 +2,8 @@
 unsetopt GLOBAL_RCS
 source $(cd ${${(%):-%x}:A:h}/../.. && pwd -P)/env
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Move ZDOTDIR from $HOME to reduce dotfile pollution.
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZGEN_DIR="$XDG_CACHE_HOME/zgen"
@@ -53,4 +55,4 @@ fi
 
 # initialize enabled topics
 _load_all env.zsh
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"

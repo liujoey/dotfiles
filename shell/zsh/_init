@@ -5,7 +5,7 @@ source .zshenv
 install() {
   local zshenv=/etc/zsh/zshenv
   case $(_os) in
-    macos)  brew install zsh fasd fd
+    macos)  brew install zsh fasd fd starship
             zshenv=/etc/zshenv
             ;;
     arch)   sudo pacman --needed --noconfirm -S zsh fasd fd
