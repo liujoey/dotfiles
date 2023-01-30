@@ -5,13 +5,13 @@ source .zshenv
 install() {
   local zshenv=/etc/zsh/zshenv
   case $(_os) in
-    macos)  brew install zsh fasd fd starship
+    macos)  brew install zsh fasd fd starship fzf
             zshenv=/etc/zshenv
             ;;
-    arch)   sudo pacman --needed --noconfirm -S zsh fasd fd
+    arch)   sudo pacman --needed --noconfirm -S zsh fasd fd starship fzf
             ;;
     debian) sudo add-apt-repository ppa:aacebedo/fasd
-            sudo apt-get update && sudo apt-get install -y zsh fasd fd
+            sudo apt-get update && sudo apt-get install -y zsh fasd fd starship fzf
             ;;
   esac
 

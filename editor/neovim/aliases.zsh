@@ -1,2 +1,2 @@
 alias n=nvim
-alias v=vim
+alias v=nvim

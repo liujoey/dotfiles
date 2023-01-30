@@ -31,6 +31,8 @@ _load shell/zsh/keybinds.zsh
 autoload -Uz compinit && compinit -d $ZSH_CACHE/zcompdump
 _load_all aliases.zsh
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
 #
 export _FASD_DATA="$XDG_CACHE_HOME/fasd"
 export _FASD_VIMINFO="$XDG_CACHE_HOME/viminfo"
@@ -40,14 +42,27 @@ autopair-init
 #
 # PYENV
 #
-export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-eval "$(pyenv init --path)"
-eval "$(pyenv init - --no-rehash)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init - --no-rehash)"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# eval "$(pyenv virtualenv-init -)"
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+#
+# JENV
+#
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
-eval "$(starship init zsh)"
+#
+# Rancher desktop
+#
+export PATH="$HOME/.rd/bin:$PATH"
+
+#
+# Prompt
+#
+source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+
 # zprof
 # vim:set ft=sh:

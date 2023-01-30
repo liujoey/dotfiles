@@ -5,7 +5,7 @@ source env.zsh
 install() {
   # TODO Install android SDK
   case $(_os) in
-    macos) brew cask install java gradle ;;
+    macos) brew install java gradle ;;
     arch)  yay --needed --noconfirm -S jdk8-openjdk gradle ;;
   esac
 }

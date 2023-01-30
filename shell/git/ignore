@@ -42,6 +42,7 @@ Thumbs.db
 .git
 .swp
 .idea
+.settings
 .*.swp
 *~
 .tags
@@ -59,3 +60,4 @@ config.codekit
 *.so
 *.dll
 *.pyc
+.vscode/
