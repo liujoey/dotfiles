@@ -28,17 +28,17 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 #
 export FZF_DEFAULT_COMMAND='(fd --type f) 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_PREVIEW_PREVIEW_BAT_THEME="OneHalfDark"
-export FZF_DEFAULT_OPTS='--reverse'
-# export FZF_DEFAULT_OPTS='--reverse
-# --color=fg:#4b505b,bg:#fafafa,hl:#5079be
-# --color=fg+:#4b505b,bg+:#fafafa,hl+:#3a8b84
-# --color=info:#88909f,prompt:#d05858,pointer:#b05ccc
-# --color=marker:#608e32,spinner:#d05858,header:#3a8b84'
+export FZF_PREVIEW_PREVIEW_BAT_THEME="Edge Serene"
+# export FZF_DEFAULT_OPTS='--reverse'
+export FZF_DEFAULT_OPTS='--reverse
+--color=fg:#4b505b,bg:#fdf7ee,hl:#5079be
+--color=fg+:#4b505b,bg+:#fdf7ee,hl+:#3a8b84
+--color=info:#88909f,prompt:#d05858,pointer:#b05ccc
+--color=marker:#608e32,spinner:#d05858,header:#3a8b84'
 
 export FORGIT_FZF_DEFAULT_OPTS="--exact --cycle --border"
 
-if ifconfig -u -X "utun?" | grep -q "inet 10\.[0-9]"; then
+if /sbin/ifconfig -u -X "utun?" | grep -q "inet 10\.[0-9]"; then
   export http_proxy=http://www-proxy.us.oracle.com:80
   export https_proxy=$http_proxy
   export no_proxy='localhost,127.0.0.1,.us.oracle.com,.oraclecorp.com,.oci.oraclecorp.com'

@@ -2,8 +2,8 @@
     name = Joey Liu
     email = liu.joey@gmail.com
 
-[includeIf "gitdir:~/oracle/"]
-    path = ~/oracle/.gitconfig
+[includeIf "gitdir:~/dev/"]
+    path = ~/dev/.gitconfig
 
 [core]
     pager = delta
@@ -20,6 +20,7 @@
 
 [rebase]
     autosquash = true
+	instructionFormat = (%an %ai) %s
 
 [push]
     default = current
@@ -41,6 +42,7 @@
     ranked-authors = !git authors | sort | uniq -c | sort -n
     emails = !git log --format="%aE" | sort -u
     email-domains = !git log --format="%aE" | awk -F'@' '{print $2}' | sort -u
+    pr  = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull-requests/$1/from:pr/$1 && git checkout pr/$1; }; f"
 
 [filter "lfs"]
     smudge = git-lfs smudge -- %f
@@ -50,6 +52,7 @@
 
 [delta]
     line-numbers = true
+	  light = true
 
 [init]
 	defaultBranch = main

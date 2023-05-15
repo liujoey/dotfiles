@@ -41,8 +41,8 @@ Thumbs.db
 .svn
 .git
 .swp
-.idea
-.settings
+# .idea
+# .settings
 .*.swp
 *~
 .tags

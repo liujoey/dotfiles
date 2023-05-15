@@ -26,6 +26,9 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
 # Aliases
 #
 
+# Layzgit
+alias lg='lazygit'
+
 # Git
 alias g='git'
 
