@@ -15,6 +15,7 @@ alias sudo='sudo '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias -- -='cd -'
 
 alias ln="${aliases[ln]:-ln} -v"  # verbose ln

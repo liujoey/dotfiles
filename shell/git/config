@@ -8,6 +8,7 @@
 [core]
     pager = delta
     whitespace = trailing-space
+	ignorecase = false
 
 [interactive]
     diffFilter = delta --color-only
@@ -56,3 +57,7 @@
 
 [init]
 	defaultBranch = main
+[log]
+	follow = true
+[pull]
+	rebase = true
