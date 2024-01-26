@@ -1,13 +1,6 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# zmodload zsh/zprof
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 export ZGEN_AUTOLOAD_COMPINIT=0
-AUTOPAIR_INHIBIT_INIT=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -42,10 +35,17 @@ _load_all aliases.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 #
-export _FASD_DATA="$XDG_CACHE_HOME/fasd"
-export _FASD_VIMINFO="$XDG_CACHE_HOME/viminfo"
-_cache fasd --init posix-alias zsh-{hook,{c,w}comp{,-install}}
 autopair-init
+
+#
+# NAVI
+#
+eval "$(navi widget zsh)"
+
+#
+# zoxide
+#
+eval "$(zoxide init zsh)"
 
 #
 # PYENV
@@ -63,14 +63,12 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 #
-# Rancher desktop
-#
-export PATH="$HOME/.rd/bin:$PATH"
-
-#
 # Prompt
 #
 source "/opt/homebrew/opt/spaceship/spaceship.zsh"
 
 # zprof
 # vim:set ft=sh:
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"

@@ -16,7 +16,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias -- -='cd -'
 
 alias ln="${aliases[ln]:-ln} -v"  # verbose ln
 alias l='ls -1'
@@ -57,9 +56,9 @@ alias ddg=duckduckgo
 alias bt=transmission-remote
 
 # Kitty Terminal
-if [[ "$TERM" == "xterm-kitty" ]]; then
-    alias ssh='kitty +kitten ssh'
-fi
-
-take() { mkdir "$1" && cd "$1"; }; compdef take=mkdir
-hex()  { echo -n $@ | xxd -psdu; }
+# if [[ "$TERM" == "xterm-kitty" ]]; then
+#     alias ssh='kitty +kitten ssh'
+# fi
+#
+# take() { mkdir "$1" && cd "$1"; }; compdef take=mkdir
+# hex()  { echo -n $@ | xxd -psdu; }

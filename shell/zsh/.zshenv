@@ -11,7 +11,7 @@ export ZSH_CACHE="$XDG_CACHE_HOME/zsh"
 
 # paths
 typeset -gU cdpath fpath mailpath path
-path=( $XDG_BIN_HOME $DOTFILES/bin $DOTFILES_DATA/*.topic/bin(N) $path )
+path=( $XDG_BIN_HOME $DOTFILES/bin $DOTFILES_DATA/*.topic/bin(N) /opt/podman/bin $path )
 fpath=( $ZDOTDIR/functions $XDG_BIN_HOME $fpath )
 
 # envvars
