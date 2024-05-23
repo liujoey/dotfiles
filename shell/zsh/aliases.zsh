@@ -54,6 +54,7 @@ alias ydl-aac='youtube-dl --extract-audio --audio-format aac'
 alias ydl-m4a='youtube-dl --extract-audio --audio-format m4a'
 alias ddg=duckduckgo
 alias bt=transmission-remote
+alias mc="mc --nosubshell"
 
 # Kitty Terminal
 # if [[ "$TERM" == "xterm-kitty" ]]; then

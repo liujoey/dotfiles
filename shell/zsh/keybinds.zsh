@@ -10,6 +10,8 @@ autoload -U is-at-least
 bindkey -v
 bindkey -M viins ',h' vi-cmd-mode
 bindkey -M viins ' ' magic-space
+bindkey -M viins "^?" backward-delete-char
+bindkey -M viins "^H" backward-delete-char
 # bindkey -M viins '^I' expand-or-complete-prefix
 
 # surround
