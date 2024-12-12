@@ -11,6 +11,7 @@ if ! source "$ZGEN_DIR/init.zsh"; then
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions src
     zgen load mafredri/zsh-async
+    zgen load qoomon/zsh-lazyload
     zgen load wfxr/forgit
     zgen load MichaelAquilina/zsh-you-should-use
 
@@ -32,29 +33,22 @@ _load_all aliases.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 #
-# NAVI
-#
-eval "$(navi widget zsh)"
-
-#
 # zoxide
 #
-eval "$(zoxide init zsh)"
+lazyload zoxide cd -- '_cache zoxide init --cmd cd zsh'
 
 #
 # PYENV
 #
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-eval "$(pyenv init --path)"
-eval "$(pyenv init - --no-rehash)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv virtualenv-init -)"
+lazyload pyenv -- 'eval "$(pyenv init --path)"; eval "$(pyenv init - --no-rehash)"; eval "$(pyenv virtualenv-init -)"'
 
 #
 # JENV
 #
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+lazyload jenv -- '_cache jenv init - --no-rehash'
 
 #
 # Prompt
