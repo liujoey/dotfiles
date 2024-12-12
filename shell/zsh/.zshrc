@@ -1,6 +1,7 @@
 export ZGEN_AUTOLOAD_COMPINIT=0
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.secret.zsh ] && source ~/.secret.zsh
 
 if ! source "$ZGEN_DIR/init.zsh"; then
     _load_repo tarjoilija/zgen $ZGEN_DIR zgen.zsh
