@@ -9,6 +9,9 @@
     pager = delta
     whitespace = trailing-space
 	ignorecase = false
+	logallrefupdates = true
+	quotePath = false
+	commitGraph = true
 
 [interactive]
     diffFilter = delta --color-only
@@ -61,3 +64,18 @@
 	follow = true
 [pull]
 	rebase = true
+[diff]
+	algorithm = histogram
+[gc]
+	reflogexpire = 90
+	writeCommitGraph = true
+[receive]
+	advertisePushOptions = true
+	procReceiveRefs = refs/for
+[fetch]
+	writeCommitGraph = true
+[safe]
+	directory = *
+[uploadpack]
+	allowfilter = true
+	allowAnySHA1InWant = true
