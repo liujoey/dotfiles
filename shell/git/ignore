@@ -10,6 +10,10 @@
 *.un~
 Session.vim
 .netrwhist
+.lazy.lua
+
+# AI related tools
+.aider*
 
 # Ignore tags (from etags and ctags)
 TAGS

@@ -55,8 +55,8 @@
     clean = git-lfs clean -- %f
 
 [delta]
+    syntax-theme = Catppuccin-mocha
     line-numbers = true
-	  light = true
 
 [init]
 	defaultBranch = main

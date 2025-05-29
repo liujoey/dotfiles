@@ -1,8 +1,8 @@
 alias ls="\\gls --color=auto --group-directories-first"
 alias date=gdate
 
-alias y=pbcopy
-alias p=pbpaste
+# alias y=pbcopy
+# alias p=pbpaste
 
 alias br=brew
 alias bru='brew update && brew upgrade && brew cleanup'
